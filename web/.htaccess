@@ -1,0 +1,15 @@
+RewriteEngine on
+
+# Redirect all slave domains (and all their subdomain combinations) to the master (www.openpim.org)
+RewriteCond %{HTTP_HOST} ^(.*)openpim\.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^(.*)openpim.net$ [NC]
+
+RewriteRule ^(.*)$ http://www.openpim.org/ [L,R=301]
+
+# Rewrite URLs of the form 'x' to the form 'index.php'.
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !=/favicon.ico
+#RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+RewriteRule ^(.*)$ index.php [L,QSA]
+

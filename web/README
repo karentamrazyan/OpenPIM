@@ -1,0 +1,23 @@
+         OpenPIM version 0.01
+
+Requirements:
+  - Apache host with PHP support and enabled mod_rewrite
+  - MySQL database
+  - Working mail() function in PHP (for contact form)
+
+Configuration:
+  1 - Create the database from the dump file "openpim.sql"
+  2 - Define the variables $email_admin and $email_postmaster 
+      in the file "site.php"
+  3 - Define $server, $username, $password and $database in 
+      the file "database.php"
+
+License
+  Karen Tamrazyan holds the copyright to this work, and it is 
+  licensed under the terms of the GNU General Public License, 
+  version 3 or later. Derivative works and later versions of 
+  the code must be free software licensed under the same or a
+  compatible license.
+
+Sep 5, 2009
+Karen Tamrazyan
